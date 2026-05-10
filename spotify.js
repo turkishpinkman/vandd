@@ -1,7 +1,8 @@
 require('dotenv').config();
 const SpotifyWebApi = require('spotify-web-api-node');
 
-const redirectUri = process.env.SPOTIFY_REDIRECT_URI || 'http://localhost:3000/api/spotify/callback';
+const redirectUri = process.env.SPOTIFY_REDIRECT_URI || 
+  (process.env.RENDER_EXTERNAL_URL ? `${process.env.RENDER_EXTERNAL_URL}/api/spotify/callback` : 'http://localhost:3000/api/spotify/callback');
 
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
