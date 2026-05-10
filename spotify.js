@@ -9,6 +9,9 @@ const spotifyApi = new SpotifyWebApi({
   redirectUri: redirectUri
 });
 
+console.log('[Spotify] Configured with Redirect URI:', redirectUri);
+console.log('[Spotify] Client ID:', process.env.SPOTIFY_CLIENT_ID ? 'OK' : 'MISSING');
+
 let tokenExpirationEpoch = 0;
 let userAccessToken = null;
 let userRefreshToken = null;
