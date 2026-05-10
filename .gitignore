@@ -7,9 +7,8 @@ package-lock.json
 .env.local
 
 # Databases
-data/*.db
-data/*.db-journal
-data/*.db-wal
+data/*.db*
+data/akona.db
 
 # Binaries
 yt-dlp.exe
