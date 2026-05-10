@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install yt-dlp via pip
-RUN pip3 install --no-cache-dir yt-dlp
+RUN pip3 install --no-cache-dir yt-dlp --break-system-packages
 
 # Create app directory
 WORKDIR /app
