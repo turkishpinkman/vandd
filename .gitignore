@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables (DO NOT UPLOAD SECRETS)
+.env
+.env.local
+
+# Databases
+data/*.db
+data/*.db-journal
+data/*.db-wal
+
+# Binaries
+yt-dlp.exe
+yt-dlp
+ffmpeg.exe
+ffprobe.exe
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp/Cache
+scratch/
+temp/
+.cache/

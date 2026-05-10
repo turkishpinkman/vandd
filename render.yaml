@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: vandd-music-server
+    env: docker
+    plan: free
+    region: frankfurt
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: MUSIC_DIR
+        value: /app/data/music
+      - key: DEEZER_ARL
+        sync: false # User should set this in Render dashboard
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
+      - key: SPOTIFY_REDIRECT_URI
+        sync: false
+    disk:
+      name: music-data
+      mountPath: /app/data
+      sizeGB: 1 # Free tier might not support disks, check Render docs
